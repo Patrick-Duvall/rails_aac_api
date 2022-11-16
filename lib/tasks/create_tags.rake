@@ -5,7 +5,8 @@ ages = [
   '26-30',
   '31-35',
   '36-50',
-  '51-75'
+  '51-75',
+  '>75'
 ]
 
 experience_levels= [
@@ -29,7 +30,7 @@ types_of_climbing = [
   'Sport',
   'Top-Rope',
   'Aid & Big Wall Climbing',
-  'Unroped ',
+  'Unroped',
   'Solo',
   'Climbing Alone',
   'Bouldering',
@@ -43,7 +44,7 @@ alpine_or_ice_factors = [
   'Ascent Illness',
   'Crampon Issues',
   'Glissading',
-  'Ski-related ',
+  'Ski-related',
   'Poor Position'
 ]
 

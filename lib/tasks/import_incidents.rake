@@ -129,9 +129,12 @@ task import_incidents: :environment do
 
       tagmap.each_key do |tag|
         next unless incident[tag]
+        # Transform csv to match tag format for ages
+        tag = '<15' if tag == '15'
+        tag = '>75' if tag == '75'
 
         tag_iterations = incident[tag] == 'Y' ? 1 : incident[tag] # needed to normalize 'Y' in data
-        tag_iterations.times do # needed for multiple age tags
+        tag_iterations.times do # needed for multiple age tagsgs
           IncidentTag.create!(
             incident: new_incident,
             tag: Tag.find_by(label: tagmap[tag])
